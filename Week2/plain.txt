@@ -1,0 +1,36 @@
+TASK 1
+a. 
+Absolute paths:
+/home/student/Documents
+~/Documents/FIT2100
+.././../.home/student
+/
+
+relative paths:
+FIT2100
+.
+..
+
+b.
+Absolute path is clear and unambiguous, while it is a bit inconvenient to type. When I am sure of the path I am looking foc.
+
+c.
+cd /
+cd .
+
+d.
+use ./ to specify current directory
+It will determine the path sotred in $PATH variable as current directory and run the program accordingly.
+
+TASK 2
+a. 
+When compiling with -g, it embeds the debugging info in the executable file and thus the size is larger.
+
+b.
+Line 5
+
+c.
+when compiling with g, it will show up the line number where error occurs.
+
+d.
+It is supposed to echo the string the user enters with a miximum number of 10 characters. It seems like finishing the job successfully but with illegal memory accessing.
