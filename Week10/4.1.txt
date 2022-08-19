@@ -1,0 +1,48 @@
+----------------------------4.1----------------------------
+/************ Task1 ************/
+150-45-40-15 = 50
+a)
+50-25 = 25
+Yes. After HOLD for P4, there will be 25 units left, so there is sufficient memory for terminating P1 or P2 (25&20). After that, the remaining processes can be completed in order.
+b)
+50-35 = 15
+No. After HOLD for P4, there will be 15 units left, which means no memory could be used to terminate any of the other 3 processes.
+
+/************ Task2 ************/
+P0: get(A)
+P1: get(D)
+P2: get(C)
+P0: get(B)
+P1: get(E)
+P2: get(F)
+P0: get(C)
+P1: get(B)
+P2: get(D)
+
+cycle: B -> P0 -> C -> P2 -> D -> P1 -> B
+
+According to the 4 conditions of deadlock, a cycle will lead to deadlock.
+
+/************ Task3 ************/
+4 conditions:
+1) mutual exclusion: at least 1 process (in this case, 1 direction) must be held in a non-sharable mode
+2) hold and wait: there must be 1 process hodling one resource and waiting for another (in this case, one car from one direction needs to wait for passing)
+3) no preemption: can't preempt resources (in this case, either 1 of the 4 cars can't preempt to pass first)
+4) circular wait: this is a process where processes request the resources while holding a resource in a circular way
+
+/************ Task4 ************/
+prevention, avoidance, and detection
+Using resource allocation to prevent the occurence of deadlock. 
+Predict the target resoucers required for the process to prevent deadlock.
+Being able to detect the deadlock and resume it back from the deadlock stat. (e.g. using algorithms) 
+
+----------------------------4.2----------------------------
+Q1: What are the four conditions that create deadlocks?
+
+Q2: Why should mutual exclusion not be disallowed in order to prevent deadlocks?
+
+Q3: How can the hold-and-wait condition be prevented?
+
+Q4: Suggest two ways in which the no-preemption condition can be prevented.
+
+Q5: Describe the three general approaches used for handling the problem of deadlocks.

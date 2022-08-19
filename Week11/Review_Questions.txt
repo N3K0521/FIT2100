@@ -1,0 +1,16 @@
+3.1 Review Questions
+
+Q1: difference btw internal and external fragementation
+	Internal fragmentation occurs when a process requires more space or use less space than its allcated memory block
+	External fragmentation occurs when removing one process from the main memory
+
+Q2: difference btw a page and a frame
+	page: a fixed-length continuous block of virtual memory (logical page)
+	frame: a fixed-length block of RAM (physical memory)
+
+Q3: difference btw a page and a segment
+	page: a fixed-length continuous block of virtual memory (internal fragmentation)
+	segment: has a varaible size which is specified by the user (external and internal fragmentation)
+
+Q4: Use of virtual memory with paging imrpove system utilisation
+	Virtual memory frees up RAM by swapping data that has not been used recently over to a storage device such as a hard drive or SSD

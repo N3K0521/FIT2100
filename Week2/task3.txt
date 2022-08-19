@@ -1,0 +1,14 @@
+/* task3.c */
+//not correct answer
+#include <stdio.h>
+
+int main() {
+	char string[10] = 'N/A'; // Initialise our string and assign the size of 10 to it
+	
+	printf("Enter a word, up to 10 characters long: ");
+	scanf("%s", &string);
+	
+	printf("You entered %s\n", &string);
+	
+	return 0;
+}

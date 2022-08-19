@@ -1,0 +1,335 @@
+/* 2.1 statements and blocks */
+x = y +z;
+scnaf("%d", &number);
+printf("%s", name);
+
+/* 2.2 selective structures */
+//2.2.1 if and if-else statement
+if (x == y)
+{
+	printf("equal");
+}
+
+if (x == y)
+{
+	printf("equal");
+}
+else
+{
+	printf("not eqaul");
+}
+
+if (x < y)
+{
+	if (x < z)
+		min = x;
+	else
+		min =z;
+}
+else
+{
+	if(y < z)
+		min = y;
+	else
+		min = z;
+}
+
+//if-else alternative
+printf("%s", (x == y)? "equal" : "not equal");
+
+
+//2.2.2 switch statement
+/* day is defined as an integer int */
+
+switch (day)
+{
+	case 1:
+		printf("MONDAY");
+		break;
+	case 2:
+		printf("TUESDAY");
+		break;
+	case 3:
+		printf("WEDNESDAY");
+		break;
+	case 4:
+		printf("THURSDAY");
+		break;
+	case 5:
+		printf("FRIDAY");
+		break;
+	case 6:
+		printf("SATURDAY");
+		break;
+	case 7:
+		printf("SUNDAY");
+		break;
+	default:
+		printf("unknown"); /* for integers not in range of 1-7 */
+		break;
+}
+
+/* 2.3 Iterative Structures */
+// 2.3.1 for loop
+for (intialisation; condition; step)
+{
+	/* statements */
+}
+
+#define MAX 10
+int number[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+for(int i = 0; i < MAX; i += 2)
+{
+	printf("%d\n", number[i]); /* 1, 3, 5, 7 and 9 are printed */
+}
+
+//2.3.2 while and do-while loops
+while (condition)
+{
+	/* statements */
+}
+
+do
+{
+	/* statements */
+} while (condition); /* a semicolon is required here */
+
+/* pointers.c */
+int *iptr;
+int x = 3;		/* iptr is a pointer to int */
+
+iptr = &x;		/* iptr points to x */
+printf("%d\n", *iptr);		/* 3 is printed */
+
+//changing pointers
+/* pointers.c */
+++x;		/* x = 4 and *iptr = 4 */
+++(*iptr);	/* x = 5 and *iptr = 5 */
+
+printf("%d\n", x);	/* 5 is printed */
+printf("%d\n", *iptr); /* 5 is printed */
+
+//re-assign it with a different variable (or a new memory address)
+/* pointers.c */
+int y = 10;
+iptr = &y;		/* iptr points to y now */
+printf("%d\n", *iptr);		/* 10 is printed */
+
+//two or more pointers can be made to refer to the same variable
+/* pointers.c */
+int *iptr1, *iptr2;		/* iptr1 and iptr2 are pointers to int */
+int z = 3;
+
+iptr1 = &z;  			/* iptr1 points to z */
+iptr2 = iptr1; 			/* iptr2 points to where iptr1 points */
+
+printf("%d\n", *iptr1);	/* 3 is printed */
+printf("%d\n", *iptr2);	/* 3 is printed */
+
+//void pointers (allows conversion btw different types) (no type checking)
+/* pointers.c */
+int *int_ptr;		/* int_ptr is a pointer to an integer */
+double *dbl_ptr;	/* dbl_ptr is a pointer to a double */
+void *v_ptr;		/* v_ptr is a pointer to any type */
+
+int_ptr = dbl_ptr;	/* illegal */
+v_ptr = (void *) int_ptr;	/* legal */
+dbl_ptr = (double *) v_ptr; /* legal */
+
+//2.4.1 pointers and function arguments
+/* pass_by_val_and_ref.c */
+
+/* passing arguments by value */
+{
+	int temp;
+	
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+/* passing arguments by reference */
+void swap_ref(int *xptr, int *yptr)
+{
+	int temp;
+	
+	temp = *xptr;
+	*xptr = *yptr;
+	*yptr = temp;
+}
+
+int main()
+{
+	int a = 1, b = 2;
+	swap_val(a, b);			/* after swap1 was executed, a = 1, b = 2 */
+	swap_ref(&a, &b); 		/* after swap2 was executed, a = 2, b = 1 */
+	return 0;
+}
+
+//2.4.2 pointers and arrays
+/* pointers_and_arrays.c */
+#include <studio.h>
+
+int main(void)
+{
+	int i;		/* counter used in loops */
+	
+	/* create an array initialised with 5 elemtns */
+	int array[5] = {11, 3, 6, -1, 8};
+	
+	/* access array using subscript notation */
+	for (i = 0; i < 5; i++)
+		printf("a[%d] = %d\n", i, array[i]);
+		
+	/* access array using pointer notation */
+	for (i = 0; i < 5; i++)
+		printf("*(a + %d) = %d\n", i, *(array + i));
+		
+	return 0;
+}
+
+/* pointers_and_strings.c */
+char array_str[] = "FIT2000";		/* an array of characters */
+char *ptr_str = "FIT2000";			/* a pointer to a string literal */
+
+printf("%s\n", array_str);
+printf("%s\n", ptr_str);
+
+// the command-line arguments
+/* argc_argv.c */
+
+#include <studio.h>
+
+int main(int argc, char *argv[])
+{
+	while (--argc > 0)
+	{
+		printf("%s%s", *(++argv), (argc > 1) ? " ": "");
+	}
+	printf("\n");
+	return 0;
+}
+
+/* 2.5structs in c */
+
+//declaring a struct
+/* structs.c */
+struct Point
+{
+	int x;
+	int y;
+};
+
+//using a struct
+/* structs.c */
+point1.x = 0;
+point1.y = 0;
+
+point2.x = 1;
+point2.y = 1;
+
+printf("%d %d\n", point1.x, point1.y);	/* point1.x = 0; point1.y = 0 */
+printf("%d %d\n", point2.x, point2.y);	/* point2.x = 1; point2.y = 1 */
+
+//to access members of a struct via pointers, using ->
+/* structs.c */
+struct Point point3;
+struct Point *ptr;		/* ptr is a pointer to struct Point */
+
+point3.x = 0;
+point3.y = 0;
+
+ptr = &point3;
+
+printf("%d %d\n", point3.x, point3.y);		/* point1.x = 0; point1.y = 0 */
+printf("%d %d\n", ptr->x, ptr->y);			/* ptr->x = 0; ptr->y = 0 */
+
+//define a struct type
+/* point.h */
+typedef struct
+{
+	int x;
+	int y;
+} Point;		/* a semicolon is required here */
+
+//include the .h header file and use this struct as follows:
+Point point1, point2; /* don't need the struct keyword here this time */
+
+//aliases to built-in data types by using typedef
+typedef unsigned long int size_t;
+
+/* 2.6 dynamic data structures */
+/* name.h */
+typedef struct
+{
+	char *first_name;
+	char *middle_name;
+	char *last_name;
+} Name;
+
+//2.6.1 memory allocation and deallocation
+//dynamic memory allocation
+/* malloc.c */
+#include <stdlib.h>
+/* function prototype */
+void *malloc(size_t size);
+
+	/* allocate space for 10 integers */
+	int *iptr = (int *) malloc (sizeof(int) * 10);
+	
+	/* allocate space for a string of 20 characters including '/0' */
+	char *first_name = (char *) malloc (sizeof(char) * 20 + 1);
+	
+//releasing dynamic memory
+/* malloc.c */
+#include <stdlib.h>
+
+/* function prototype */
+void free(void *ptr);
+
+	/* de-allocate memory pointed by iptr and first_name */
+	free(first_name);
+	free(iptr);
+
+// 2.6.2 multi-dimensional arrays
+//using pointers and dynamic memory to create multi-dimensional arrays of arbitary size
+/* multui_dimensional_arrays.c */
+
+int array [][];		// an array of arrays
+int **array;		// a pointer to a pointer
+
+//to allocate memory for multi-dimensional array, outer first, then inner
+/* multi_dimensional_arrays.c */
+
+int **create_2Darray (int dimx, int dimy, int initial_value)
+{
+	int i, j;		/* counters */
+	int **array;
+	
+	/* allocate an array of pointers */
+	array = (int **) malloc (sizeof(int *) * dimy);
+	
+	for (i = 0; i < dimy; i++)
+	{
+		/* allocate an array of intergs */
+		array[i] = (int *) malloc (sizeof(int) * dimx);
+		
+		for (j = 0; j < dimx; j++)
+			array[i][j] = initial_value;
+	}
+	return array;
+}
+
+//de-allocation -> memory is released in reverse order
+/* multi_dimentional_arrays.c */
+
+void free_2Darray(int ** array, int dimy)
+{
+	int i;
+	for (i = 0; i < dimy; i++)
+	{
+		free(array[i]):		/* free the memory of reach row */
+	}
+	free(array);
+}
+			

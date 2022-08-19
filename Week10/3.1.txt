@@ -1,0 +1,62 @@
+----------------------------3.1----------------------------
+/************ Task1 ************/
+a) 
+show a sequence such that the statement "x is 10" is printed.
+P1: x = x - 1; 9
+P1: x = x + 1; 10
+P2: x = x - 1; 9
+P1: if (x != 10) 9
+P2: x = x + 1; 10
+P1: printf("x is %d", x); 10 // "x is 10" is printed
+// x is equal to time when its value is read from memory for printing
+
+/************ Task2 ************/
+a) 
+proper lower bound and upper bound -> tally in total()
+const int n =50;
+int tally;
+
+void total() {
+	int count;
+	for (count = 1; count <= n; count ++)
+		tally++;
+}
+
+void main () {
+	tally = 0;
+	parbegin (total(), total()); //P1: 1st total(), P2: 2nd total()
+	printf("%d/n", tally);
+}
+
+P1: 
+	for (count = 1; count <= n; count ++) //line 24: tally = 0
+		tally++; //tally = 1 but not loads into the memory location, P1 drop and start P2
+P2:
+	for (count = 1; count <= n; count ++) //from count = 1 to count = 49
+		tally++; //tally = 49, preempt P2 and resume P1
+P1:
+	for (count = 1; count <= n; count ++)
+		tally++; //tally = 1 is stored, drop P1 and back to P2
+P2:
+	for (count = 1; count <= n; count ++) //count = 50
+		tally++; //load tally = 1 here and tally becomes 2 (lower bound found), resume P1
+P1:
+	for (count = 1; count <= n; count ++) count = 2 to count = 50, since count <= n is no longer ture, execution complete
+		tally++; //tally = 50 here, P1 completed so back to P2
+P2:
+	for (count = 1; count <= n; count ++) from count = 1 to count = 50
+		tally++; //tally = 100 (upper bound found) (which is 2*total counts of process)
+
+b)
+the lower bound will always be 2, and the upper bound can be found by doing the calculation: 2 * total counts
+
+----------------------------3.2----------------------------
+Q1: What is a race condition?
+
+Q2: What is a mutual exclusion? Is mutual exclusion important for the execution of execution of concurrent processes?
+
+Q3: What is the difference between binary semaphores and general semaphores?
+
+
+
+

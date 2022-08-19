@@ -1,0 +1,52 @@
+3.1
+*******************************************************************************************
+Q1: What are the three levels of process scheduling?
+long-term scheduling: the decision to add to the pool of processes to be executed
+
+medium-term scheduling: the decision to add to the number of processes that are partially or fully in main memory
+
+short-term scheduling: the decision as to which available process will be executed by the processor
+
+Q2: What is the difference between turnaround time and response time?
+turnaround time: the amount of time elapsed from the time of submission to the time of completion
+response time: the average time elapsed from submission until the first response is produced
+
+Q3: Waht is the difference betweeen preemptive and non-preemptive scheduling?
+preemptive scheduling: the CPU is allocated to the processes for a limited time
+
+non-preemptive scheduling: the CPU is allocated to the process till it terminates or switches 
+to the waiting state
+
+Q4: Is a non-preemptive scheduling aporach a good choice for interactive systems? Why?
+Non-preemptive scheduling: Once a process is in the running state - it will continue until the
+process terminates or blocks itself for I/O and other os services
+
+For interactive system preemption is essential to keep on process from hogging the CPU and denying service
+to the others.
+
+Q5: Explain the differences between periodic and aperiodic real-time systems?
+Periodic real-time system: tasks are controlled by the clock interrupts and time interval after which the task
+repeats itself is known as period of the task
+
+Aperiodic real-time system: tasks occurs at any random time and btw two aperiodic real-time tasks the time interval
+may be 0
+
+*******************************************************************************************
+
+3.2
+*******************************************************************************************
+Q1: What is the maximum number of processes that can be in the READY, RUN and BLOCKED
+	states on a system with:
+a) one CPU?
+b) n CPUs?
+
+Q2: Consider a variant of the Round RObin scheduling algorithm where the entries in the
+	READY queue are pointers to the Process Control Blocks (PCBs):
+a) What would be the effect of putting two pointers to the same process in the READY queue?
+
+b) What would be the major advantage of this scheme?
+
+c) How could you modify the basic Round Robin algorithm to achieve the same effect without
+	having the duplicate pointers?
+
+

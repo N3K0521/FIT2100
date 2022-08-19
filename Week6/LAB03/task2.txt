@@ -1,0 +1,251 @@
+student@fit-vm:~/Desktop/Week6/LAB03$ gcc fork2.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03$ ./fork
+Message from P at the 0th iteration
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S     0       1       0  0  80   0 - 25563 -      ?        00:00:01 systemd
+1 S     0       2       0  0  80   0 -     0 -      ?        00:00:00 kthreadd
+1 I     0       3       2  0  60 -20 -     0 -      ?        00:00:00 rcu_gp
+1 I     0       4       2  0  60 -20 -     0 -      ?        00:00:00 rcu_par_gp
+1 I     0       6       2  0  60 -20 -     0 -      ?        00:00:00 kworker/0:0H-events_highpri
+1 I     0       9       2  0  60 -20 -     0 -      ?        00:00:00 mm_percpu_wq
+1 S     0      10       2  0  80   0 -     0 -      ?        00:00:00 rcu_tasks_rude_
+1 S     0      11       2  0  80   0 -     0 -      ?        00:00:00 rcu_tasks_trace
+1 S     0      12       2  0  80   0 -     0 -      ?        00:00:00 ksoftirqd/0
+1 I     0      13       2  0  80   0 -     0 -      ?        00:00:00 rcu_sched
+1 S     0      14       2  0 -40   - -     0 -      ?        00:00:00 migration/0
+1 S     0      15       2  0   9   - -     0 -      ?        00:00:00 idle_inject/0
+1 S     0      16       2  0  80   0 -     0 -      ?        00:00:00 cpuhp/0
+1 S     0      17       2  0  80   0 -     0 -      ?        00:00:00 cpuhp/1
+1 S     0      18       2  0   9   - -     0 -      ?        00:00:00 idle_inject/1
+1 S     0      19       2  0 -40   - -     0 -      ?        00:00:00 migration/1
+1 S     0      20       2  0  80   0 -     0 -      ?        00:00:00 ksoftirqd/1
+1 I     0      22       2  0  60 -20 -     0 -      ?        00:00:00 kworker/1:0H-events_highpri
+5 S     0      23       2  0  80   0 -     0 -      ?        00:00:00 kdevtmpfs
+1 I     0      24       2  0  60 -20 -     0 -      ?        00:00:00 netns
+1 I     0      25       2  0  60 -20 -     0 -      ?        00:00:00 inet_frag_wq
+1 S     0      26       2  0  80   0 -     0 -      ?        00:00:00 kauditd
+1 S     0      27       2  0  80   0 -     0 -      ?        00:00:00 khungtaskd
+1 S     0      28       2  0  80   0 -     0 -      ?        00:00:00 oom_reaper
+1 I     0      29       2  0  60 -20 -     0 -      ?        00:00:00 writeback
+1 S     0      30       2  0  80   0 -     0 -      ?        00:00:00 kcompactd0
+1 S     0      31       2  0  85   5 -     0 -      ?        00:00:00 ksmd
+1 S     0      32       2  0  99  19 -     0 -      ?        00:00:00 khugepaged
+1 I     0      79       2  0  60 -20 -     0 -      ?        00:00:00 kintegrityd
+1 I     0      80       2  0  60 -20 -     0 -      ?        00:00:00 kblockd
+1 I     0      81       2  0  60 -20 -     0 -      ?        00:00:00 blkcg_punt_bio
+1 I     0      82       2  0  60 -20 -     0 -      ?        00:00:00 tpm_dev_wq
+Message from P at the 1th iteration
+1 I     0      83       2  0  60 -20 -     0 -      ?        00:00:00 ata_sff
+1 I     0      84       2  0  60 -20 -     0 -      ?        00:00:00 md
+1 I     0      85       2  0  60 -20 -     0 -      ?        00:00:00 edac-poller
+1 I     0      86       2  0  60 -20 -     0 -      ?        00:00:00 devfreq_wq
+1 S     0      87       2  0   9   - -     0 -      ?        00:00:00 watchdogd
+1 I     0      89       2  0  60 -20 -     0 -      ?        00:00:00 kworker/0:1H-kblockd
+1 S     0      91       2  0  80   0 -     0 -      ?        00:00:00 kswapd0
+1 S     0      92       2  0  80   0 -     0 -      ?        00:00:00 ecryptfs-kthrea
+1 I     0      94       2  0  60 -20 -     0 -      ?        00:00:00 kthrotld
+1 I     0      95       2  0  60 -20 -     0 -      ?        00:00:00 acpi_thermal_pm
+1 I     0      96       2  0  60 -20 -     0 -      ?        00:00:00 vfio-irqfd-clea
+1 I     0      97       2  0  60 -20 -     0 -      ?        00:00:00 ipv6_addrconf
+1 I     0     106       2  0  60 -20 -     0 -      ?        00:00:00 kstrp
+1 I     0     109       2  0  60 -20 -     0 -      ?        00:00:00 zswap-shrink
+1 I     0     110       2  0  60 -20 -     0 -      ?        00:00:00 kworker/u5:0
+1 I     0     115       2  0  60 -20 -     0 -      ?        00:00:00 charger_manager
+1 I     0     139       2  0  60 -20 -     0 -      ?        00:00:00 kworker/1:1H-kblockd
+1 S     0     164       2  0  80   0 -     0 -      ?        00:00:00 scsi_eh_0
+1 I     0     166       2  0  60 -20 -     0 -      ?        00:00:00 scsi_tmf_0
+1 S     0     168       2  0  80   0 -     0 -      ?        00:00:00 scsi_eh_1
+1 I     0     169       2  0  60 -20 -     0 -      ?        00:00:00 scsi_tmf_1
+1 S     0     197       2  0  80   0 -     0 -      ?        00:00:00 jbd2/sda5-8
+1 I     0     198       2  0  60 -20 -     0 -      ?        00:00:00 ext4-rsv-conver
+4 S     0     237       1  0  79  -1 - 13451 -      ?        00:00:00 systemd-journal
+4 S     0     259       1  0  80   0 -  5997 -      ?        00:00:00 systemd-udevd
+1 S     0     268       2  0  60 -20 -     0 -      ?        00:00:00 loop0
+1 S     0     293       2  0  60 -20 -     0 -      ?        00:00:00 loop1
+1 S     0     301       2  0  60 -20 -     0 -      ?        00:00:00 loop2
+1 S     0     302       2  0  60 -20 -     0 -      ?        00:00:00 loop3
+1 S     0     304       2  0  60 -20 -     0 -      ?        00:00:00 loop4
+1 S     0     305       2  0  60 -20 -     0 -      ?        00:00:00 loop5
+1 S     0     308       2  0  60 -20 -     0 -      ?        00:00:00 loop6
+1 S     0     310       2  0  60 -20 -     0 -      ?        00:00:00 loop7
+1 S     0     311       2  0  60 -20 -     0 -      ?        00:00:00 loop8
+1 S     0     312       2  0  60 -20 -     0 -      ?        00:00:00 loop9
+1 S     0     313       2  0  60 -20 -     0 -      ?        00:00:00 loop10
+1 S     0     314       2  0  60 -20 -     0 -      ?        00:00:00 loop11
+1 S     0     316       2  0  60 -20 -     0 -      ?        00:00:00 loop12
+1 S     0     318       2  0  60 -20 -     0 -      ?        00:00:00 loop13
+1 I     0     323       2  0  60 -20 -     0 -      ?        00:00:00 ttm_swap
+1 I     0     336       2  0  60 -20 -     0 -      ?        00:00:00 cryptd
+4 S   101     509       1  0  80   0 -  6009 -      ?        00:00:00 systemd-resolve
+4 S   102     510       1  0  80   0 - 22565 -      ?        00:00:00 systemd-timesyn
+4 S     0     542       1  0  80   0 - 59585 -      ?        00:00:00 accounts-daemon
+4 S     0     543       1  0  80   0 -   637 -      ?        00:00:00 acpid
+4 S     0     544       1  0  80   0 -  2042 -      ?        00:00:00 anacron
+4 S   115     546       1  0  80   0 -  2133 -      ?        00:00:00 avahi-daemon
+4 S     0     547       1  0  80   0 -  2355 -      ?        00:00:00 cron
+4 S     0     548       1  0  80   0 -  7144 -      ?        00:00:00 cupsd
+4 S   103     550       1  0  80   0 -  2493 -      ?        00:00:01 dbus-daemon
+4 S     0     554       1  0  80   0 - 137230 -     ?        00:00:02 NetworkManager
+4 S     0     560       1  0  80   0 - 20459 -      ?        00:00:00 irqbalance
+4 S     0     567       1  0  80   0 -  9834 -      ?        00:00:00 networkd-dispat
+4 S     0     572       1  0  80   0 - 60288 -      ?        00:00:00 polkitd
+4 S   104     578       1  0  80   0 - 56134 -      ?        00:00:00 rsyslogd
+Message from P at the 2th iteration
+4 S     0     583       1  0  80   0 - 290963 -     ?        00:00:02 snapd
+4 S     0     585       1  0  80   0 - 58901 -      ?        00:00:00 switcheroo-cont
+4 S     0     587       1  0  80   0 -  4176 -      ?        00:00:00 systemd-logind
+4 S     0     589       1  0  80   0 - 98235 -      ?        00:00:00 udisksd
+4 S     0     595       1  0  80   0 -  3422 -      ?        00:00:00 wpa_supplicant
+4 S     0     601       1  0  80   0 - 114838 -     ?        00:00:00 vpnagentd
+1 S   115     602     546  0  80   0 -  2088 -      ?        00:00:00 avahi-daemon
+4 S     0     638       1  0  80   0 - 44600 -      ?        00:00:00 cups-browsed
+4 S     7     639     548  0  80   0 -  3834 -      ?        00:00:00 dbus
+4 S     0     642       1  0  80   0 - 78439 -      ?        00:00:00 ModemManager
+0 S     0     666       2  0  80   0 -   624 -      ?        00:00:00 bpfilter_umh
+4 S     0     775       1  0  80   0 - 29507 -      ?        00:00:00 unattended-upgr
+4 S     0     777       1  0  80   0 -  3046 -      ?        00:00:00 sshd
+1 S     0     788       1  0  80   0 -  3236 -      ?        00:00:00 xrdp-sesman
+4 S     0     791       1  0  80   0 - 76504 -      ?        00:00:00 lightdm
+1 S   128     811       1  0  80   0 -  3266 -      ?        00:00:00 xrdp
+4 S   998     820       1  0  80   - - 67280 -      ?        00:00:33 netdata
+4 S   120     821       1  0  80   0 - 81719 -      ?        00:00:00 whoopsie
+1 S   116     822       1  0  80   0 -  2816 -      ?        00:00:00 kerneloops
+1 S   116     824       1  0  80   0 -  2816 -      ?        00:00:00 kerneloops
+4 S     0     827     791  0  80   0 - 233235 -     tty7     00:00:40 Xorg
+4 S     0     841       1  0  80   0 -  2109 -      tty1     00:00:00 agetty
+4 S   998     931     820  0  80   - - 13557 -      ?        00:01:05 apps.plugin
+0 S   998     932     820  0  80   - -  1154 -      ?        00:00:00 nfacct.plugin
+0 S   998     956     820  0  80   - - 13461 -      ?        00:00:03 python.d.plugin
+4 S   111    1126       1  0  81   1 - 38235 -      ?        00:00:00 rtkit-daemon
+1 I     0    1208       2  0  60 -20 -     0 -      ?        00:00:00 cfg80211
+4 S     0    1247       1  0  80   0 - 63050 -      ?        00:00:00 upowerd
+4 S   121    1353       1  0  80   0 - 61592 -      ?        00:00:00 colord
+4 S     0    1358     791  0  80   0 - 40085 -      ?        00:00:00 lightdm
+4 S  1001    1409       1  0  80   0 -  4780 ep_pol ?        00:00:00 systemd
+5 S  1001    1410    1409  0  80   0 - 25916 -      ?        00:00:00 (sd-pam)
+0 S  1001    1416    1409  0  69 -11 - 548847 poll_s ?       00:00:00 pulseaudio
+0 S  1001    1418    1409  0  99   - - 146362 poll_s ?       00:00:00 tracker-miner-f
+1 S  1001    1420       1  0  80   0 - 60024 -      ?        00:00:00 gnome-keyring-d
+0 S  1001    1424    1409  0  80   0 -  3294 ep_pol ?        00:00:00 dbus-daemon
+4 S  1001    1426    1358  0  80   0 - 47065 poll_s ?        00:00:00 gnome-session-b
+0 S  1001    1431    1409  0  80   0 - 39098 poll_s ?        00:00:00 dconf-service
+0 S  1001    1442    1409  0  80   0 - 59936 poll_s ?        00:00:00 gvfsd
+0 S  1001    1459    1409  0  80   0 - 94586 futex_ ?        00:00:00 gvfsd-fuse
+Message from P at the 3th iteration
+0 S  1001    1466    1409  0  80   0 - 78500 poll_s ?        00:00:00 gvfs-udisks2-vo
+0 S  1001    1474    1409  0  80   0 - 58927 poll_s ?        00:00:00 gvfs-mtp-volume
+0 S  1001    1478    1409  0  80   0 - 59496 poll_s ?        00:00:00 gvfs-gphoto2-vo
+0 S  1001    1484    1409  0  80   0 - 79190 poll_s ?        00:00:00 gvfs-afc-volume
+0 S  1001    1497    1409  0  80   0 - 58978 poll_s ?        00:00:00 gvfs-goa-volume
+0 S  1001    1503    1409  0  80   0 - 136274 poll_s ?       00:00:00 goa-daemon
+0 S  1001    1530    1409  0  80   0 - 78699 poll_s ?        00:00:00 goa-identity-se
+1 S  1001    1558    1426  0  80   0 -  1510 -      ?        00:00:00 ssh-agent
+0 S  1001    1581    1409  0  80   0 - 76360 poll_s ?        00:00:00 at-spi-bus-laun
+0 S  1001    1586    1581  0  80   0 -  1812 ep_pol ?        00:00:00 dbus-daemon
+0 S  1001    1609    1409  0  80   0 - 22517 poll_s ?        00:00:00 gnome-session-c
+0 S  1001    1616    1409  0  80   0 - 172284 poll_s ?       00:00:00 gnome-session-b
+0 S  1001    1636    1409  1  80   0 - 1088212 poll_s ?      00:01:32 gnome-shell
+0 S  1001    1685    1636  0  80   0 - 77731 poll_s ?        00:00:00 ibus-daemon
+0 S  1001    1689    1685  0  80   0 - 59134 poll_s ?        00:00:00 ibus-dconf
+0 S  1001    1690    1685  0  80   0 - 68936 poll_s ?        00:00:01 ibus-extension-
+0 S  1001    1694    1409  0  80   0 - 49492 poll_s ?        00:00:00 ibus-x11
+0 S  1001    1697    1409  0  80   0 - 59128 poll_s ?        00:00:00 ibus-portal
+0 S  1001    1705    1409  0  80   0 - 40728 poll_s ?        00:00:00 at-spi2-registr
+0 S  1001    1712    1409  0  80   0 - 58901 poll_s ?        00:00:00 xdg-permission-
+0 S  1001    1717    1409  0  80   0 - 145274 poll_s ?       00:00:00 gnome-shell-cal
+0 S  1001    1723    1409  0  80   0 - 267542 poll_s ?       00:00:00 evolution-sourc
+0 S  1001    1733    1409  0  80   0 - 209688 poll_s ?       00:00:00 evolution-calen
+0 S  1001    1747    1409  0  80   0 - 168313 poll_s ?       00:00:00 evolution-addre
+0 S  1001    1771    1409  0  80   0 - 649635 poll_s ?       00:00:00 gjs
+0 S  1001    1772    1442  0  80   0 - 78503 poll_s ?        00:00:00 gvfsd-trash
+0 S  1001    1782    1409  0  80   0 - 77431 poll_s ?        00:00:00 gsd-a11y-settin
+0 S  1001    1783    1409  0  80   0 - 126175 poll_s ?       00:00:00 gsd-color
+0 S  1001    1785    1409  0  80   0 - 93422 poll_s ?        00:00:00 gsd-datetime
+0 S  1001    1789    1409  0  80   0 - 77948 poll_s ?        00:00:00 gsd-housekeepin
+0 S  1001    1794    1409  0  80   0 - 86507 poll_s ?        00:00:00 gsd-keyboard
+0 S  1001    1795    1409  0  80   0 - 225306 poll_s ?       00:00:00 gsd-media-keys
+0 S  1001    1797    1409  0  80   0 - 123471 poll_s ?       00:00:00 gsd-power
+0 S  1001    1800    1409  0  80   0 - 62067 poll_s ?        00:00:00 gsd-print-notif
+0 S  1001    1801    1409  0  80   0 - 114285 poll_s ?       00:00:00 gsd-rfkill
+0 S  1001    1804    1409  0  80   0 - 58887 poll_s ?        00:00:00 gsd-screensaver
+Message from P at the 4th iteration
+Message from P at the 5th iteration
+Message from P at the 6th iteration
+0 S  1001    1808    1409  0  80   0 - 116180 poll_s ?       00:00:00 gsd-sharing
+0 S  1001    1811    1409  0  80   0 - 78806 poll_s ?        00:00:00 gsd-smartcard
+0 S  1001    1812    1409  0  80   0 - 79855 poll_s ?        00:00:00 gsd-sound
+Message from P at the 7th iteration
+0 S  1001    1825    1409  0  80   0 - 114691 poll_s ?       00:00:00 gsd-usb-protect
+0 S  1001    1826    1409  0  80   0 - 86372 poll_s ?        00:00:00 gsd-wacom
+0 S  1001    1831    1616  0  80   0 - 57950 poll_s ?        00:00:00 gsd-disk-utilit
+0 S  1001    1832    1616  0  80   0 - 78189 poll_s ?        00:00:00 indicator-messa
+0 S  1001    1836    1409  0  80   0 - 78512 poll_s ?        00:00:00 gsd-wwan
+0 S  1001    1839    1409  0  80   0 - 86696 poll_s ?        00:00:00 gsd-xsettings
+0 S  1001    1866    1616  0  80   0 - 159415 poll_s ?       00:00:00 evolution-alarm
+4 S  1001    1925    1409  0  80   0 - 411353 poll_s ?       00:00:17 snap-store
+0 S  1001    1934    1685  0  80   0 - 40675 poll_s ?        00:00:00 ibus-engine-sim
+0 S  1001    1945    1409  0  80   0 - 85557 poll_s ?        00:00:00 gsd-printer
+0 S  1001    1952    1409  0  80   0 - 114383 poll_s ?       00:00:00 xdg-document-po
+0 S  1001    2052    1409  0  80   0 - 115653 poll_s ?       00:00:00 xdg-desktop-por
+0 S  1001    2056    1409  0  80   0 - 123477 poll_s ?       00:00:00 xdg-desktop-por
+4 S     0    2068       1  0  80   0 - 96081 -      ?        00:00:00 fwupd
+0 S  1001    2781    1409  0  80   0 - 40586 poll_s ?        00:00:00 gvfsd-metadata
+0 S  1001    2784    1616  0  80   0 - 105145 poll_s ?       00:00:00 update-notifier
+Message from P at the 8th iteration
+0 S  1001    3263    1409  0  80   0 - 108683 poll_s ?       00:00:00 tracker-store
+4 S  1001    5737    1409  0  80   0 - 801744 poll_s ?       00:00:26 firefox
+4 S  1001    5810    5737  0  80   0 - 606130 poll_s ?       00:00:01 Privileged Cont
+4 S  1001    5856    5737  0  80   0 - 604670 poll_s ?       00:00:01 WebExtensions
+4 S  1001    5894    5737  0  80   0 - 701307 poll_s ?       00:00:12 Web Content
+4 S  1001    5935    5737  0  80   0 - 598620 poll_s ?       00:00:00 Web Content
+4 S  1001    5969    5737  0  80   0 - 48986 poll_s ?        00:00:00 RDD Process
+0 S  1001    5989    1409  0  80   0 - 366846 poll_s ?       00:00:14 nautilus
+0 S  1001    6029    1442  0  80   0 - 78540 poll_s ?        00:00:00 gvfsd-network
+0 S  1001    6044    1442  0  80   0 - 78756 poll_s ?        00:00:00 gvfsd-dnssd
+1 I     0    6274       2  0  80   0 -     0 -      ?        00:00:00 kworker/0:2-events
+0 R  1001   10108    1409  0  80   0 - 203955 poll_s ?       00:00:02 gnome-terminal-
+0 S  1001   10115   10108  0  80   0 -  2654 poll_s pts/0    00:00:00 bash
+1 I     0   10820       2  0  80   0 -     0 -      ?        00:00:00 kworker/0:1-cgroup_destroy
+1 I     0   13659       2  0  80   0 -     0 -      ?        00:00:00 kworker/u4:2-events_power_efficient
+1 I     0   13666       2  0  80   0 -     0 -      ?        00:00:00 kworker/1:0-cgroup_destroy
+Message from P at the 9th iteration
+1 I     0   13742       2  0  80   0 -     0 -      ?        00:00:00 kworker/1:2-events
+1 I     0   14476       2  0  80   0 -     0 -      ?        00:00:00 kworker/u4:0-ext4-rsv-conversion
+1 I     0   15962       2  0  80   0 -     0 -      ?        00:00:00 kworker/u4:1-events_unbound
+1 I     0   15963       2  0  80   0 -     0 -      ?        00:00:00 kworker/0:0-events
+0 S  1001   15978   10108  0  80   0 -  2654 do_wai pts/1    00:00:00 bash
+0 S  1001   15990    1409  1  80   0 - 205540 poll_s ?       00:00:01 pluma
+0 S   998   16005     820  0  80   - -  1009 -      ?        00:00:00 bash
+0 S  1001   16033   15978  0  80   0 -   624 do_wai pts/1    00:00:00 fork
+1 S  1001   16034   16033  0  80   0 -   591 do_wai pts/1    00:00:00 fork
+0 S  1001   16035   16034  0  80   0 -   654 do_wai pts/1    00:00:00 sh
+4 R  1001   16036   16035  0  80   0 -  2855 -      pts/1    00:00:00 ps
+Message from C at the 0th iteration
+Message from C at the 1th iteration
+Message from C at the 2th iteration
+Message from C at the 3th iteration
+Message from C at the 4th iteration
+Message from C at the 5th iteration
+Message from C at the 6th iteration
+Message from C at the 7th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+
+
+
+Task 2:
+1 S  1001   16034   16033  0  80   0 -   591 do_wai pts/1    00:00:00 fork
+0 S  1001   16035   16034  0  80   0 -   654 do_wai pts/1    00:00:00 sh
+4 R  1001   16036   16035  0  80   0 -  2855 -      pts/1    00:00:00 ps
+
+a)chile process PID: 16034
+b)Parent process ID: 16033
+c)16034   16033
+  16035   16034  
+d)16033 -> 15978 -> 10108 -> 1409 -> 1
+
+exec(): 1.replace the calling process and does not return
+		2.can only invoke an executable file
+system(): 1.start a new process to execute the program
+		  2.can invoke any command
+

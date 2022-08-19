@@ -1,0 +1,170 @@
+//initial
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ gcc fork-ex1.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ ./fork
+Message from P at the 0th iteration
+Message from C at the 0th iteration
+Message from P at the 1th iteration
+Message from C at the 1th iteration
+Message from P at the 2th iteration
+Message from C at the 2th iteration
+Message from P at the 3th iteration
+Message from C at the 3th iteration
+Message from P at the 4th iteration
+Message from C at the 4th iteration
+Message from P at the 5th iteration
+Message from C at the 5th iteration
+Message from P at the 6th iteration
+Message from C at the 6th iteration
+Message from P at the 7th iteration
+Message from C at the 7th iteration
+Message from P at the 8th iteration
+Message from P at the 9th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+
+//100,000
+Message from P at the 0th iteration
+Message from P at the 1th iteration
+Message from P at the 2th iteration
+Message from P at the 3th iteration
+Message from P at the 4th iteration
+Message from P at the 5th iteration
+Message from P at the 6th iteration
+Message from P at the 7th iteration
+Message from P at the 8th iteration
+Message from P at the 9th iteration
+Message from C at the 0th iteration
+Message from C at the 1th iteration
+Message from C at the 2th iteration
+Message from C at the 3th iteration
+Message from C at the 4th iteration
+Message from C at the 5th iteration
+Message from C at the 6th iteration
+Message from C at the 7th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+
+//100
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ gcc fork-ex1.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ ./fork
+Message from P at the 0th iteration
+Message from P at the 1th iteration
+Message from P at the 2th iteration
+Message from P at the 3th iteration
+Message from P at the 4th iteration
+Message from P at the 5th iteration
+Message from P at the 6th iteration
+Message from P at the 7th iteration
+Message from P at the 8th iteration
+Message from P at the 9th iteration
+Message from C at the 0th iteration
+Message from C at the 1th iteration
+Message from C at the 2th iteration
+Message from C at the 3th iteration
+Message from C at the 4th iteration
+Message from C at the 5th iteration
+Message from C at the 6th iteration
+Message from C at the 7th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+
+//10,000,000
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ gcc fork-ex1.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ ./fork
+Message from P at the 0th iteration
+Message from C at the 0th iteration
+Message from C at the 1th iteration
+Message from P at the 1th iteration
+Message from C at the 2th iteration
+Message from P at the 2th iteration
+Message from C at the 3th iteration
+Message from P at the 3th iteration
+Message from C at the 4th iteration
+Message from P at the 4th iteration
+Message from C at the 5th iteration
+Message from P at the 5th iteration
+Message from C at the 6th iteration
+Message from P at the 6th iteration
+Message from C at the 7th iteration
+Message from P at the 7th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+Message from P at the 8th iteration
+Message from P at the 9th iteration
+
+//100,000,000
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ gcc fork-ex1.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ ./fork
+Message from P at the 0th iteration
+Message from C at the 0th iteration
+Message from C at the 1th iteration
+Message from P at the 1th iteration
+Message from C at the 2th iteration
+Message from P at the 2th iteration
+Message from C at the 3th iteration
+Message from P at the 3th iteration
+Message from C at the 4th iteration
+Message from P at the 4th iteration
+Message from C at the 5th iteration
+Message from P at the 5th iteration
+Message from C at the 6th iteration
+Message from P at the 6th iteration
+Message from C at the 7th iteration
+Message from P at the 7th iteration
+Message from C at the 8th iteration
+Message from C at the 9th iteration
+Message from P at the 8th iteration
+Message from P at the 9th iteration
+
+
+//What can you say about the output?
+The order of the output may differ.
+
+//What has happened to the pattern of executions of the two processes?
+As the execution time decreases, the parent process is more likely to complete
+earlier than its child processes.
+
+
+//Are there any changes?
+The parent process and child process execute with interleaving.
+
+//Does this result in anything different?
+no
+
+//find a value for the limit
+the limit is 1000000000 -> only 2 output at one time (but slowly)
+
+//using sleep(2):
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ gcc fork-ex1.c -o fork
+student@fit-vm:~/Desktop/Week6/LAB03/C source files for Laboratory Tasks-20210831$ ./fork
+Message from P at the 0th iteration
+Message from C at the 0th iteration
+Message from P at the 1th iteration
+Message from C at the 1th iteration
+Message from P at the 2th iteration
+Message from C at the 2th iteration
+Message from P at the 3th iteration
+Message from C at the 3th iteration
+Message from P at the 4th iteration
+Message from C at the 4th iteration
+Message from P at the 5th iteration
+Message from C at the 5th iteration
+Message from P at the 6th iteration
+Message from C at the 6th iteration
+Message from P at the 7th iteration
+Message from C at the 7th iteration
+Message from P at the 8th iteration
+Message from C at the 8th iteration
+Message from P at the 9th iteration
+Message from C at the 9th iteration
+
+//What differences in the output do you notice?
+Simillar to using wait(), sleep() can also let the parent and child processes
+execute alternately
+
+//Summary:
+Parent process would keep execute while a new child process is forked when the code of execution
+is relatively large or the processes sleep for a certain time. However, the output order may differ when
+the code is small (e.g.: with a small limit).
+depends on different scheduling of processes each time.
+

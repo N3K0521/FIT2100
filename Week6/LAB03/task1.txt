@@ -1,0 +1,6 @@
+The htop -t command is dynamic which differes from the ps command.
+
+All of its processes are the child process of the process with a PID of 0.
+
+bash is the child process of the terminal, the command inputed by the user is 
+the child process of it.

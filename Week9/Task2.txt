@@ -1,0 +1,148 @@
+a) Is it possible to get a value less than 48 or more than 52?
+No, becuase each thread can only modify the value once (either +2 or -2)
+
+b) What is the purpose of adding random delays between each of the load, increment
+	/decrement and save steps in pthread1() and pthread2()?
+The purpose is to simulate the process that the thread retrieved the parameter
+(modifying and save it back)
+
+c) Can we predict the output on any given run?
+No. Since the sleep time for the thread is uncertain therefore it's impossible
+to predict which thread would wake first.
+
+d)What conditions would need to happen in order to get the expected output of 50?
+As one parameter is being modified by two different sources at the same time,
+and the operations will be runned follow their modification's order.
+
+
+
+
+
+
+
+
+
+
+
+/*output*/
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 2 now terminating
+
+thread 1 now terminating
+
+The final value of theValue is 52 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 48 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 2 now terminating
+
+thread 1 now terminating
+
+The final value of theValue is 52 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 2 now terminating
+
+thread 1 now terminating
+
+The final value of theValue is 52 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 48 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 48 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 2 now terminating
+
+thread 1 now terminating
+
+The final value of theValue is 52 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 50 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 48 
+
+student@fit-vm:~/Desktop/Week9$ ./race
+
+thread 2 has started
+
+thread 1 has started
+
+thread 1 now terminating
+
+thread 2 now terminating
+
+The final value of theValue is 50 
+

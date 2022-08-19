@@ -1,0 +1,50 @@
+Task1.1
+mkdir FIT2100/TUTORIALS
+cd FIT2100
+mkdir LABS
+cd LABS
+touch LAB1_Task1_1.txt
+
+
+
+Task1.2
+/**************** a *****************/
+absolute paths: starting with "/"
+
+------------Absolute paths------------
+/home/student/Documents
+/
+
+-----------Relative paths-------------
+FIT2100
+~/Documents/FIT2100
+.././../.home/student
+.
+..
+
+/**************** b *****************/
+Absolute path is too long to type sometimes. Relative path would be easier to use when the path is under the current directory for sure.
+
+/**************** c *****************/
+cd ~/..
+cd /
+
+/**************** d *****************/
+./ would be used to specify current directory
+The path stored in $PATH variable as current directory would be determined and the file will be compiled if no errors exist
+
+
+
+Task2
+/**************** a *****************/
+gcc -g : embed debugging information inside the executable file -> so it's larger
+
+/**************** b *****************/
+line 5
+
+/**************** c *****************/
+with -g: it will tell you which line contains error
+valgrind: it runs the program in a partly-simulated environment to check if the program is accessing memory safely and informs you the memory errors that is found
+
+/**************** d *****************/
+It supposed to return the string that the user input. However since the memory isn't assigned correctly, so the file can't compiled.

@@ -1,0 +1,11 @@
+limit = 2:
+the program prints 8 times
+
+limit = 1:
+the program prints 4 times
+
+limit = 3:
+the program prints 16 times
+
+limit = n:
+the program prints 2**(n+1) times

@@ -1,0 +1,34 @@
+Task 1
+-------------------------------------------------
+FIFO: 15 page faults
+LRU: 13 page faults
+Optimal: 10 page faults
+
+Task 2
+-------------------------------------------------
+a) 198 < 268, physical address = 660 + 198 = 858
+b) 790 > 722, segmentation fault occurs
+c) 199 < 298, physical address = 242 + 199 = 441
+d) 605 > 604, segmentation fault occurs
+
+Task 3
+-------------------------------------------------
+a) first-fit:
+	256K in 400K
+	506K in 700K
+	128K in 150K
+	456K can't be allocated
+b) next-fit:
+	256K in 400K
+	506K in 700K
+	128K in 400K
+	456K can't be allocated
+c) best-fit:
+	256K in 400K
+	506K in 700K
+	128K in 150K
+	456 can't be allocated
+
+Most efficient: best-fit 
+(in this case, both best-fit and first-fit)
+

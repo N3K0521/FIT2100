@@ -1,0 +1,46 @@
+Task4.1
+Q1:
+1. Programmed I/O
+2. Interrupt-driven I/O
+3. Direct Memory Access
+
+Q2:
+Block-oriented: stored information in blocks of fixed sizes
+Character-oriented devices: driver communicates by sending and receiving single characters (e.g. bytes) such as serial ports or parallel ports
+
+Q3:
+Single buffering: user process can be processing one block of data while the next block is being read in.
+Double buffering: the process which can transfer data btw buffer when the OS is dealing with other buffer (2 buffers parrelly)
+
+Q4:
+Track selection, seek time, rotational delay
+
+Q5:
+FCFS:First Come First Serve
+SSF: Shortest Seek First
+Elevator: scans down towards the nearest end and then when it hits the bottom, it scans up servicing the requests that it didn't get going down
+C-SCAN: One way with fast return
+
+Q6:
+Internal fragmentation: free space within a single block, this space can't be allocated to other files
+External fragmentation: free blocks btw different files
+
+Task4.2.1
+because each sector contains 8 blocks, and since the file is containing data less that 512 bytes, so only 1 block would be used
+a. 2,500,000/8 = 312500 sectors
+b. 63 * 8 = 504 blocks; 2,500,000 // 504 + 1 = 4961 tracks
+c. 90 * 63 * 8 = 45360 blocks; 2,500,000 // 45360 + 1 = 56 surfaces
+d. 4 * 90 * 63 * 8 = 181440 blocks; 2,500,000 // 181440 + 1 = 14 disks
+
+Task4.2.2
+a)
+FCFS: 89 -> 125 -> 112 -> 15 -> 190 -> 137 -> 56 -> 12 -> 89 -> 38 -> 164 -> 133
+SSF: 89 -> 89 -> 112 -> 125 -> 133 -> 137 -> 164 -> 190 -> 56 -> 38 -> 15 -> 12
+Elevator: 89 -> 89 -> 56 -> 38 -> 15 -> 12 -> 112 -> 125 -> 133 -> 137 -> 164 -> 190
+C-SCAN: 89 -> 89 -> 56 -> 38 -> 15 -> 12 -> 190 -> 164 -> 137 -> 133 -> 125 -> 112
+
+b)
+FCFS: ((125-89)+(112-89)+(89-15)+(190-89)+(137-89)+(89-56)+(89-12)+(89-89)+(89-38)+(164-89)+(133-89))/11=562/11=51.1
+SSF: ((190-89)+(190-12))/11=279/11=25.4
+Elevator: ((89-12)+(190-12))/11=255/11=23.2
+C-SCAN: ((89-12)+(190-12)+(190-112))/11=333/11=30.3
