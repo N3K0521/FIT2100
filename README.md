@@ -1,3 +1,2 @@
 # FIT2100
-Operating System
-Some C language 
+Operating System - Some C language 
